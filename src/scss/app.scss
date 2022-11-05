@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;800&family=Dancing+Script:wght@400;500;600;700&family=Lobster&family=Monoton&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;800&family=Dancing+Script:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,600;1,600;1,700&family=Lobster&family=Monoton&display=swap');
 @import 'base/normalize';
 @import 'base/variables';
 
 @import 'base/mixins';
 @import 'base/globales';
+@import 'utilidades/boton';
 
-
-@import 'layout/footer';
 @import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
+

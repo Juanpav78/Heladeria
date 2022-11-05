@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;800&family=Dancing+Script:wght@400;500;600;700&family=Lobster&family=Monoton&display=swap"); /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;800&family=Dancing+Script:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,600;1,600;1,700&family=Lobster&family=Monoton&display=swap"); /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -319,5 +319,119 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.8;
-  background-color: #748fc9;
+  background-color: #84c3d6;
+}
+
+.contenedor {
+  margin: 0 auto;
+  max-width: 120rem;
+}
+
+a, p {
+  font-family: "Baloo Tamma 2", cursive;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.boton_circular {
+  width: 7rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #5c4141;
+  border-radius: 50%;
+  padding: 2rem;
+}
+
+.nav__boton {
+  position: absolute;
+  top: 10rem;
+  right: 20rem;
+  cursor: pointer;
+}
+.nav__boton .nav__boton--line {
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #f0f0f0;
+  padding: 0.25rem 1rem;
+  margin: 0.25rem 0;
+  transition: transform 0.3s ease-in;
+}
+.nav__boton.active .nav__boton--line {
+  background-color: #84c3d6;
+}
+.nav__boton.active .nav__boton--line:first-child {
+  transform: rotate(45deg) translateY(7px) translateX(7px);
+}
+.nav__boton.active .nav__boton--line:nth-child(2) {
+  transform: scale(0);
+}
+.nav__boton.active .nav__boton--line:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px) translateX(6px);
+}
+
+/* @keyframes botonNav__linea1 {
+    0% {
+        transform: rotate(0);
+      }
+      50% {
+        transform: translateY(2rem) rotate(0);
+      }
+
+      100% {
+        transform: translateY(2rem) rotate(135deg);
+        background-color: brown;
+      }
+} */
+.header {
+  background: #f0f0f0;
+  height: 35rem;
+  box-shadow: 0 0 1.5rem 2px #5c4141;
+  text-align: center;
+}
+.header .header__contenedor {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.logo {
+  margin-top: 3rem;
+}
+.logo .logo__img {
+  width: 10rem;
+}
+.logo .logo__texto {
+  color: #5c4141;
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-family: "Exo 2", sans-serif;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.nav .nav__texto {
+  color: #5c4141;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 2rem 2rem 0.5rem 2rem;
+  border-bottom: 1rem solid #5c4141;
+  transition: all 0.3s ease-in;
+}
+.nav .nav__texto:hover {
+  color: #84c3d6;
+  border-bottom: 1rem solid #84c3d6;
+}
+
+.main {
+  background-image: url("../../src/img/imgHeladosSabores.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(50%);
+  height: 50rem;
+  transition: background-image 1s ease-in;
+}
+.main h1 {
+  margin: 0;
 }

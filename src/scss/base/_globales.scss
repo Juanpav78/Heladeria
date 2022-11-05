@@ -10,5 +10,16 @@ body {
     font-size: 1.6rem;
     line-height: 1.8;
 
-    background-color: $blueCake;
+    background-color: $blueCakeLogo;
+}
+
+.contenedor{
+    margin: 0 auto;
+    max-width: 120rem;
+}
+
+a, p{
+    font-family: $fontText;
+    text-decoration: none;
+    text-transform: uppercase;
 }

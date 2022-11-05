@@ -1,0 +1,12 @@
+.main{
+    background-image: url('../../src/img/imgHeladosSabores.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(50%);
+    height: 50rem;
+    h1{
+        margin: 0;
+    }
+    transition: background-image 1s ease-in;
+}

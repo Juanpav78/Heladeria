@@ -1,0 +1,63 @@
+.boton_circular{
+    width: 7rem;
+
+    display: flex;
+    flex-direction: column;
+    background-color: $brownCakeDark;
+    border-radius: 50%;
+    padding: 2rem;
+}
+
+.nav__boton{
+    position: absolute;
+    top: 10rem;
+    right: 20rem;
+
+
+    cursor: pointer;
+
+
+    .nav__boton--line{
+        width: 3rem;
+        height: .25rem;
+
+        background-color: $greyLigth;
+        padding: .25rem 1rem;
+        margin: .25rem 0;
+
+        transition: transform .3s ease-in;
+        
+
+    }
+
+    &.active{
+        .nav__boton--line{
+            background-color: $blueCakeLogo;
+            &:first-child{  
+                transform: rotate(45deg) translateY(7px) translateX(7px);
+            }
+            &:nth-child(2){
+                transform: scale(0);
+            }
+            &:nth-child(3){
+                transform: rotate(-45deg) translateY(-7px) translateX(6px);
+            }
+        }
+        
+    }
+}
+
+/* @keyframes botonNav__linea1 {
+    0% {
+        transform: rotate(0);
+      }
+      50% {
+        transform: translateY(2rem) rotate(0);
+      }
+    
+      100% {
+        transform: translateY(2rem) rotate(135deg);
+        background-color: brown;
+      }
+} */
+
