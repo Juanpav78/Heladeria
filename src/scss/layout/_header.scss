@@ -10,6 +10,8 @@
         flex-direction: column;
         justify-content: space-around;
     }
+
+    
     
     
 }
@@ -47,4 +49,23 @@
             border-bottom: 1rem solid $blueCakeLogo;
         }
     }
+
 }
+
+@include tablet{
+
+
+        .header{
+            height: 32rem ;
+
+            .boton{
+                visibility:visible;
+                display: flex;
+            }
+        }
+
+        .nav__texto{
+            visibility: hidden;
+            display: none;
+        }
+    }

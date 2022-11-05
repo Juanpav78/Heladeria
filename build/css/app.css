@@ -333,6 +333,11 @@ a, p {
   text-transform: uppercase;
 }
 
+.boton {
+  visibility: hidden;
+  display: none;
+}
+
 .boton_circular {
   width: 7rem;
   display: flex;
@@ -344,8 +349,9 @@ a, p {
 
 .nav__boton {
   position: absolute;
-  top: 10rem;
-  right: 20rem;
+  top: 24rem;
+  left: 50%;
+  margin: 0 0 0 -3.5rem;
   cursor: pointer;
 }
 .nav__boton .nav__boton--line {
@@ -423,6 +429,19 @@ a, p {
   border-bottom: 1rem solid #84c3d6;
 }
 
+@media (max-width: 1000px) {
+  .header {
+    height: 32rem;
+  }
+  .header .boton {
+    visibility: visible;
+    display: flex;
+  }
+  .nav__texto {
+    visibility: hidden;
+    display: none;
+  }
+}
 .main {
   background-image: url("../../src/img/imgHeladosSabores.jpg");
   background-position: center;

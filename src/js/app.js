@@ -15,9 +15,9 @@ const animateBtn = () =>{
 
 const fondos = [
     "imgHeladosSabores4",
-    "imgHeladosSabores",
-    "imgHeladosVarios",
-    "imgVitrinaHelados"
+    "imgHeladosSabores3",
+    "imgHeladosSabores"
+    
 ]
 
 
@@ -28,7 +28,7 @@ setInterval(function(){
     const fondo = document.getElementById("fondo");
     fondo.style.backgroundImage= `url(./src/img/${fondos[i]}.jpg)`;
     i++;
-    if(i==4){
+    if(i==fondos.length){
         i=0;
     }
 },12000);
