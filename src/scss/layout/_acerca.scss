@@ -1,0 +1,95 @@
+.acercaDe{
+    background-color: $brownCakeDark;
+
+    color: $white;
+    h2{
+        font-family: $fontTitle3;
+        font-size: 7.4rem;
+        text-transform: capitalize;
+    }
+
+    h3{
+        font-family: $fontText;
+        margin-top: .8rem;
+        font-size: 2.4rem;
+    }
+
+    
+}
+
+.acercaDe__locales{
+    display: flex;
+    justify-content: space-between;
+
+    .acercaDe__locales--carta{
+        img{
+            max-width: 35rem;
+            height: 23rem;
+        }
+
+        h3{
+            margin-top: .8rem;
+            margin-bottom: -1rem;
+        }
+    }
+}
+
+.acercaDe__texto{
+    p{
+        margin-bottom: 3rem;
+        font-size: 1.8rem;
+    }
+}
+
+.boton__cuadrado{
+    position: relative;
+    z-index: 2;
+    border: .25rem solid $white;
+    width: 22rem;
+    height: 6.3rem;
+    margin: 2.4rem 0 0 auto;
+    overflow: hidden;
+    
+
+    &::before{
+        content: "";
+        width: 8.3rem;
+        height: 8.3rem;
+        border-radius: 50rem;
+        position: absolute;
+        top: -1rem;
+        left: 6.5rem;
+        z-index: -1;
+        animation: boton__circuloR .8s both;
+    }
+
+    &:hover{
+        &::before{
+            animation: boton__circulo .8s both;
+        }
+
+    }
+  }
+
+
+  @keyframes boton__circulo {
+    0% {
+        transform: scale(.3);
+      }
+    
+      100% {
+        background-color: $blueCakeLogo;
+        transform: scale(4);
+      }
+  }
+
+  @keyframes boton__circuloR {
+    0% {
+        transform: scale(4);
+        background-color: $blueCakeLogo;
+      }
+      100% {
+        transform: scale(.3);
+        background-color: transparent;
+      }
+  }

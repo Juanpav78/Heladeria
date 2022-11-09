@@ -1,5 +1,5 @@
 .header{
-    background: $greyLigth;
+    background: $white;
     height: 35rem;
     box-shadow: 0 0 1.5rem 2px $brownCakeDark;
     text-align: center;
@@ -9,14 +9,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        padding: 0;
     }
-
-    
-    
-    
 }
 
 .logo{
+    user-select: none;
     margin-top: 3rem;
     .logo__img{
         width: 10rem;
@@ -24,13 +22,14 @@
 
     .logo__texto{
         color: $brownCakeDark;
-
+        text-transform: uppercase;
         font-size: 4.5rem;
         font-weight: 600;
         font-family: $fontTitle1;
         font-style: italic;
 
         margin-top: 0;
+        
     }
 }
 
@@ -53,12 +52,10 @@
 }
 
 @include tablet{
-
-
         .header{
             height: 32rem ;
 
-            .boton{
+            .nav__boton{
                 visibility:visible;
                 display: flex;
             }

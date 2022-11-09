@@ -10,7 +10,9 @@ const btn= () => {
 
 const animateBtn = () =>{
     const botones = document.querySelector(".boton") ;
+    botones.classList.remove('no-animation')
     botones.classList.toggle('active');
+    
 }
 
 const fondos = [
@@ -19,11 +21,7 @@ const fondos = [
     "imgHeladosSabores"
     
 ]
-
-
 i = 0;
-
-
 setInterval(function(){
     const fondo = document.getElementById("fondo");
     fondo.style.backgroundImage= `url(./src/img/${fondos[i]}.jpg)`;

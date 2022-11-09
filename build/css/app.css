@@ -325,17 +325,17 @@ body {
 .contenedor {
   margin: 0 auto;
   max-width: 120rem;
+  padding: 2rem 0;
 }
 
-a, p {
+a, p, h1, h2 {
   font-family: "Baloo Tamma 2", cursive;
   text-decoration: none;
-  text-transform: uppercase;
+  margin: 0;
 }
 
-.boton {
-  visibility: hidden;
-  display: none;
+.no-padding {
+  padding: 0;
 }
 
 .boton_circular {
@@ -347,7 +347,18 @@ a, p {
   padding: 2rem;
 }
 
+.boton__cuadrado {
+  color: rgb(248, 248, 248);
+  padding: 1.5rem 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}
+
 .nav__boton {
+  visibility: hidden;
+  display: none;
+  text-transform: uppercase;
   position: absolute;
   top: 24rem;
   left: 50%;
@@ -360,36 +371,92 @@ a, p {
   background-color: #f0f0f0;
   padding: 0.25rem 1rem;
   margin: 0.25rem 0;
-  transition: transform 0.3s ease-in;
 }
-.nav__boton.active .nav__boton--line {
-  background-color: #84c3d6;
+.nav__boton .nav__boton--line:first-child {
+  animation: botonNav__linea1R 1s both;
+}
+.nav__boton .nav__boton--line:nth-child(2) {
+  animation: botonNav__linea2R 1s both;
+}
+.nav__boton .nav__boton--line:nth-child(3) {
+  animation: botonNav__linea3R 1s both;
 }
 .nav__boton.active .nav__boton--line:first-child {
-  transform: rotate(45deg) translateY(7px) translateX(7px);
+  animation: botonNav__linea1 1s both;
 }
 .nav__boton.active .nav__boton--line:nth-child(2) {
-  transform: scale(0);
+  animation: botonNav__linea2 1s both;
 }
 .nav__boton.active .nav__boton--line:nth-child(3) {
-  transform: rotate(-45deg) translateY(-7px) translateX(6px);
+  animation: botonNav__linea3 1s both;
 }
 
-/* @keyframes botonNav__linea1 {
-    0% {
-        transform: rotate(0);
-      }
-      50% {
-        transform: translateY(2rem) rotate(0);
-      }
+.no-animation .na {
+  animation: none !important;
+}
 
-      100% {
-        transform: translateY(2rem) rotate(135deg);
-        background-color: brown;
-      }
-} */
+@keyframes botonNav__linea1 {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: translateY(10px) rotate(0);
+  }
+  100% {
+    transform: translateY(10px) rotate(45deg);
+  }
+}
+@keyframes botonNav__linea1R {
+  0% {
+    transform: translateY(10px) rotate(45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes botonNav__linea2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes botonNav__linea2R {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes botonNav__linea3 {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+@keyframes botonNav__linea3R {
+  0% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .header {
-  background: #f0f0f0;
+  background: rgb(248, 248, 248);
   height: 35rem;
   box-shadow: 0 0 1.5rem 2px #5c4141;
   text-align: center;
@@ -399,9 +466,11 @@ a, p {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding: 0;
 }
 
 .logo {
+  user-select: none;
   margin-top: 3rem;
 }
 .logo .logo__img {
@@ -409,6 +478,7 @@ a, p {
 }
 .logo .logo__texto {
   color: #5c4141;
+  text-transform: uppercase;
   font-size: 4.5rem;
   font-weight: 600;
   font-family: "Exo 2", sans-serif;
@@ -433,7 +503,7 @@ a, p {
   .header {
     height: 32rem;
   }
-  .header .boton {
+  .header .nav__boton {
     visibility: visible;
     display: flex;
   }
@@ -447,10 +517,113 @@ a, p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: brightness(50%);
   height: 50rem;
   transition: background-image 1s ease-in;
 }
 .main h1 {
   margin: 0;
+}
+
+.main__info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.main__info .main__info--titulo, .main__info .main__info--boton {
+  color: white;
+  font-family: "Exo 2", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: rgba(17, 17, 17, 0.7);
+  border-radius: 10px;
+  padding: 2rem;
+}
+.main__info .main__info--boton {
+  border: 1px solid rgb(248, 248, 248);
+  box-shadow: 0 0 15px 2px rgb(39, 39, 39);
+  user-select: none;
+  transition: all 0.1s ease-in;
+  font-weight: 700;
+}
+.main__info .main__info--boton:hover {
+  background-color: #5c4141;
+}
+
+.acercaDe {
+  background-color: #5c4141;
+  color: rgb(248, 248, 248);
+}
+.acercaDe h2 {
+  font-family: "Lobster", cursive;
+  font-size: 7.4rem;
+  text-transform: capitalize;
+}
+.acercaDe h3 {
+  font-family: "Baloo Tamma 2", cursive;
+  margin-top: 0.8rem;
+  font-size: 2.4rem;
+}
+
+.acercaDe__locales {
+  display: flex;
+  justify-content: space-between;
+}
+.acercaDe__locales .acercaDe__locales--carta img {
+  max-width: 35rem;
+  height: 23rem;
+}
+.acercaDe__locales .acercaDe__locales--carta h3 {
+  margin-top: 0.8rem;
+  margin-bottom: -1rem;
+}
+
+.acercaDe__texto p {
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+}
+
+.boton__cuadrado {
+  position: relative;
+  z-index: 2;
+  border: 0.25rem solid rgb(248, 248, 248);
+  width: 22rem;
+  height: 6.3rem;
+  margin: 2.4rem 0 0 auto;
+  overflow: hidden;
+}
+.boton__cuadrado::before {
+  content: "";
+  width: 8.3rem;
+  height: 8.3rem;
+  border-radius: 50rem;
+  position: absolute;
+  top: -1rem;
+  left: 6.5rem;
+  z-index: -1;
+  animation: boton__circuloR 0.8s both;
+}
+.boton__cuadrado:hover::before {
+  animation: boton__circulo 0.8s both;
+}
+
+@keyframes boton__circulo {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    background-color: #84c3d6;
+    transform: scale(4);
+  }
+}
+@keyframes boton__circuloR {
+  0% {
+    transform: scale(4);
+    background-color: #84c3d6;
+  }
+  100% {
+    transform: scale(0.3);
+    background-color: transparent;
+  }
 }

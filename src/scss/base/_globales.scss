@@ -16,10 +16,15 @@ body {
 .contenedor{
     margin: 0 auto;
     max-width: 120rem;
+    padding: 2rem 0;
 }
 
-a, p{
+a, p, h1, h2{
     font-family: $fontText;
     text-decoration: none;
-    text-transform: uppercase;
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
 }
