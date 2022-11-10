@@ -319,13 +319,20 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.8;
-  background-color: #84c3d6;
 }
 
 .contenedor {
   margin: 0 auto;
+  width: 90%;
   max-width: 120rem;
   padding: 2rem 0;
+}
+
+img {
+  min-width: 28rem;
+  width: 100%;
+  min-height: 19rem;
+  max-width: 35rem;
 }
 
 a, p, h1, h2 {
@@ -338,6 +345,30 @@ a, p, h1, h2 {
   padding: 0;
 }
 
+.contenedor__wave {
+  width: 100%;
+  height: 15rem;
+  position: relative;
+  overflow: hidden;
+  top: -6rem;
+}
+
+.wave {
+  width: 300%;
+  height: 15rem;
+  background-image: url("../../src/img/wave.svg");
+  background-size: contain;
+  animation: wave 30s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -120rem;
+  }
+}
 .boton_circular {
   width: 7rem;
   display: flex;
@@ -475,6 +506,8 @@ a, p, h1, h2 {
 }
 .logo .logo__img {
   width: 10rem;
+  min-width: auto;
+  min-height: auto;
 }
 .logo .logo__texto {
   color: #5c4141;
@@ -507,9 +540,13 @@ a, p, h1, h2 {
     visibility: visible;
     display: flex;
   }
-  .nav__texto {
+  .navbar {
     visibility: hidden;
     display: none;
+  }
+  .navbar.active {
+    visibility: visible;
+    display: block;
   }
 }
 .main {
@@ -517,7 +554,7 @@ a, p, h1, h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50rem;
+  height: 54rem;
   transition: background-image 1s ease-in;
 }
 .main h1 {
@@ -536,13 +573,12 @@ a, p, h1, h2 {
   font-family: "Exo 2", sans-serif;
   text-transform: uppercase;
   text-align: center;
-  background-color: rgba(17, 17, 17, 0.7);
+  background-color: rgba(92, 66, 66, 0.9);
   border-radius: 10px;
   padding: 2rem;
 }
 .main__info .main__info--boton {
   border: 1px solid rgb(248, 248, 248);
-  box-shadow: 0 0 15px 2px rgb(39, 39, 39);
   user-select: none;
   transition: all 0.1s ease-in;
   font-weight: 700;
@@ -569,10 +605,7 @@ a, p, h1, h2 {
 .acercaDe__locales {
   display: flex;
   justify-content: space-between;
-}
-.acercaDe__locales .acercaDe__locales--carta img {
-  max-width: 35rem;
-  height: 23rem;
+  gap: 2rem;
 }
 .acercaDe__locales .acercaDe__locales--carta h3 {
   margin-top: 0.8rem;
@@ -602,7 +635,6 @@ a, p, h1, h2 {
   top: -1rem;
   left: 6.5rem;
   z-index: -1;
-  animation: boton__circuloR 0.8s both;
 }
 .boton__cuadrado:hover::before {
   animation: boton__circulo 0.8s both;
@@ -617,13 +649,54 @@ a, p, h1, h2 {
     transform: scale(4);
   }
 }
-@keyframes boton__circuloR {
+@keyframes boton__circulo2 {
   0% {
-    transform: scale(4);
-    background-color: #84c3d6;
+    transform: scale(0.3);
   }
   100% {
-    transform: scale(0.3);
-    background-color: transparent;
+    background-color: #84c3d6;
+    transform: scale(10);
+  }
+}
+@media (max-width: 1000px) {
+  .acercaDe__locales {
+    flex-direction: column;
+  }
+  .boton__cuadrado {
+    margin: 2.4rem 0;
+    width: 100%;
+  }
+  .boton__cuadrado::before {
+    top: -1rem;
+    left: calc(50% - 6rem);
+  }
+  .boton__cuadrado:hover::before {
+    animation: boton__circulo2 0.8s both;
+  }
+}
+.contenedor__helados {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 1.4rem;
+}
+
+.helados h2 {
+  font-family: "Lobster", cursive;
+  font-size: 7.4rem;
+  text-transform: capitalize;
+  text-align: center;
+  color: #5c4141;
+  text-shadow: -1px 3px #b2a18a;
+}
+
+@media (max-width: 1000px) {
+  .contenedor__helados {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 512px) {
+  .contenedor__helados {
+    grid-template-columns: 1fr;
   }
 }

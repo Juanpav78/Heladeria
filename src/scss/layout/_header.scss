@@ -18,6 +18,8 @@
     margin-top: 3rem;
     .logo__img{
         width: 10rem;
+        min-width: auto;
+        min-height: auto;
     }
 
     .logo__texto{
@@ -61,8 +63,14 @@
             }
         }
 
-        .nav__texto{
+        .navbar{
             visibility: hidden;
             display: none;
+
+
+            &.active{
+                visibility: visible;
+                display: block;
+            }
         }
     }

@@ -9,14 +9,20 @@ html {
 body {
     font-size: 1.6rem;
     line-height: 1.8;
-
-    background-color: $blueCakeLogo;
 }
 
 .contenedor{
     margin: 0 auto;
+    width: 90%;
     max-width: 120rem;
     padding: 2rem 0;
+}
+
+img{
+    min-width: 28rem;
+    width: 100%;
+    min-height: 19rem;
+    max-width: 35rem;
 }
 
 a, p, h1, h2{
@@ -28,3 +34,30 @@ a, p, h1, h2{
 .no-padding{
     padding: 0;
 }
+
+.contenedor__wave{
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    overflow: hidden;
+    top: -6rem;
+}
+
+.wave{
+    width: 300%;
+    height: 15rem;
+    background-image: url('../../src/img/wave.svg');
+    background-size: contain;
+    
+    animation: wave 30s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+       margin-left:0 ;
+      }
+      100% {
+       margin-left:-120rem ;
+      }
+}
+

@@ -20,12 +20,8 @@
 .acercaDe__locales{
     display: flex;
     justify-content: space-between;
-
+    gap: 2rem;
     .acercaDe__locales--carta{
-        img{
-            max-width: 35rem;
-            height: 23rem;
-        }
 
         h3{
             margin-top: .8rem;
@@ -60,7 +56,6 @@
         top: -1rem;
         left: 6.5rem;
         z-index: -1;
-        animation: boton__circuloR .8s both;
     }
 
     &:hover{
@@ -83,13 +78,38 @@
       }
   }
 
-  @keyframes boton__circuloR {
+  @keyframes boton__circulo2 {
     0% {
-        transform: scale(4);
-        background-color: $blueCakeLogo;
-      }
-      100% {
         transform: scale(.3);
-        background-color: transparent;
+      }
+    
+      100% {
+        background-color: $blueCakeLogo;
+        transform: scale(10);
       }
   }
+
+
+@include tablet{
+    .acercaDe__locales{
+        flex-direction: column;
+
+
+    }
+
+    .boton__cuadrado{
+        margin: 2.4rem 0;
+        width: 100%;
+        &::before{
+            top: -1rem;
+            left: calc(50% - 6rem);
+        }
+
+        &:hover{
+            &::before{
+                animation: boton__circulo2 .8s both;
+            }
+    
+        }
+    }
+}

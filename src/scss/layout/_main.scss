@@ -3,7 +3,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50rem;
+    height: 54rem;
     h1{
         margin: 0;
     }
@@ -24,7 +24,7 @@
         font-family: $fontTitle1;
         text-transform: uppercase;
         text-align: center;
-        background-color: rgba(17, 17, 17, 0.7);
+        background-color: $brownCakeDarkT;
         border-radius: 10px;
         padding: 2rem;
         
@@ -32,7 +32,6 @@
 
     .main__info--boton{
         border: 1px solid $white;
-        box-shadow: 0 0 15px 2px rgb(39, 39, 39);
         user-select: none;
         transition: all .1s ease-in;
         font-weight: 700;

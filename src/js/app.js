@@ -12,6 +12,14 @@ const animateBtn = () =>{
     const botones = document.querySelector(".boton") ;
     botones.classList.remove('no-animation')
     botones.classList.toggle('active');
+
+    const botonNav = document.getElementById("botonNav");
+    const navbar = document.getElementById("navbar");
+    if(botonNav.classList.contains("active")){
+        navbar.classList.add('active');
+    }else{
+        navbar.classList.remove('active');
+    }
     
 }
 

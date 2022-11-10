@@ -1,0 +1,32 @@
+.contenedor__helados{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    justify-items: center;
+    gap: 1.4rem;
+
+}
+
+.helados{
+    h2{
+        font-family: $fontTitle3;
+        font-size: 7.4rem;
+        text-transform: capitalize;
+        text-align: center;
+
+        color: $brownCakeDark;
+        text-shadow: -1px 3px #b2a18a;
+    }
+}
+
+
+@include tablet{
+    .contenedor__helados{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@include telefono{
+    .contenedor__helados{
+        grid-template-columns: 1fr;
+    }
+}
