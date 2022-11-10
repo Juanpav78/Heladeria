@@ -4,8 +4,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gelatteria</title>
+    
     <link rel="icon" href="./src/img/LogoHelado.svg" type="image/x-icon/png" sizes="32x32">
+    <script src="https://kit.fontawesome.com/a3e96fcead.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="build/css/app.css"> 
+    
 </head>
 <body>
     <header class="header">
@@ -39,7 +42,7 @@
                 <div class="main__info">
                     <h1 class="main__info--titulo">¿Ya probaste nuestros helados?</h1>
 
-                    <a class="main__info--boton boton " href="#">Conoce nuestros sabores</a>
+                    <a class="main__info--boton boton " href="#IDsabores">Conoce nuestros sabores</a>
                 </div>
             </div>
         </div>
@@ -77,7 +80,7 @@
                 </div>
             </div>
 
-            <a href="" class="boton__cuadrado boton ">conoce nuestras sedes</a>
+            <a href="#" class="boton__cuadrado boton ">conoce nuestras sedes</a>
         </div>
              
     </section>
@@ -88,63 +91,66 @@
 
     
 
-    <section class="helados">
+    <section class="helados" id="IDsabores">
         <div class="contenedor">
             <h2> Nuestros helados</h2>
 
             <div class="contenedor__helados">
                 <div class="helados__carta">
                     <img src="./src/img/imgBananaSplit.jpg" alt="">
-                    <h3></h3>
-                    <p></p>
+                    <div class="helados__carta--info">
+                        <h3>Banana Split</h3>
+                        <p>Delicioso helado Banana Split con 3 sabores y frutas</p>
+                        <p class="precio">3000$</p>
+                    </div>
+                    
                 </div>
-    
+                <div class="helados__carta">
+                    <img src="./src/img/imgBananaSplit2.jpg" alt="">
+                    <div class="helados__carta--info">
+                        <h3>Banana Split</h3>
+                        <p>Delicioso helado Banana Split con 3 sabores y frutas</p>
+                        <p class="precio">3000$</p>
+                    </div>
+                    
+                </div>
                 <div class="helados__carta">
                     <img src="./src/img/imgBananaSplit3.jpg" alt="">
-                    <h3></h3>
-                    <p></p>
-                </div>
-    
-                <div class="helados__carta">
-                    <img src="./src/img/imgCestaHelado.jpg" alt="">
-                    <h3></h3>
-                    <p></p>
+                    <div class="helados__carta--info">
+                        <h3>Banana Split</h3>
+                        <p>Delicioso helado Banana Split con 3 sabores y frutas</p>
+                        <p class="precio">3000$</p>
+                    </div>
+                    
                 </div>
 
-                <div class="helados__carta">
-                    <img src="./src/img/imgBananaSplit.jpg" alt="">
-                    <h3></h3>
-                    <p></p>
-                </div>
-    
-                <div class="helados__carta">
-                    <img src="./src/img/imgBananaSplit3.jpg" alt="">
-                    <h3></h3>
-                    <p></p>
-                </div>
-    
-                <div class="helados__carta">
-                    <img src="./src/img/imgCestaHelado.jpg" alt="">
-                    <h3></h3>
-                    <p></p>
-                </div>
 
                 <div class="helados__carta">
-                    <img src="./src/img/imgBananaSplit.jpg" alt="">
-                    <h3></h3>
-                    <p></p>
-                </div>
-    
-                <div class="helados__carta">
-                    <img src="./src/img/imgBananaSplit3.jpg" alt="">
-                    <h3></h3>
-                    <p></p>
-                </div>
-    
-                <div class="helados__carta">
                     <img src="./src/img/imgCestaHelado.jpg" alt="">
-                    <h3></h3>
-                    <p></p>
+                    <div class="helados__carta--info">
+                        <h3>Banana Split</h3>
+                        <p>Delicioso helado Banana Split con 3 sabores y frutas</p>
+                        <p class="precio">3000$</p>
+                    </div>
+                    
+                </div>
+                <div class="helados__carta">
+                    <img src="./src/img/imgCestaHelado2.jpg" alt="">
+                    <div class="helados__carta--info">
+                        <h3>Banana Split</h3>
+                        <p>Delicioso helado Banana Split con 3 sabores y frutas</p>
+                        <p class="precio">3000$</p>
+                    </div>
+                    
+                </div>
+                <div class="helados__carta">
+                    <img src="./src/img/imgCestaHelado3.jpg" alt="">
+                    <div class="helados__carta--info">
+                        <h3>Banana Split</h3>
+                        <p>Delicioso helado Banana Split con 3 sabores y frutas</p>
+                        <p class="precio">3000$</p>
+                    </div>
+                    
                 </div>
             </div>
 
@@ -153,9 +159,13 @@
 
     </section>
 
-    <footer>
+    <footer class="footer">
+        <div class="footer__copy"><p>&copy; 2022 - Juan Alvarado</p></div>
+        <div class="footer__social">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
 
-
+        </div>
     </footer>
     
     <script src="src/js/app.js"></script>

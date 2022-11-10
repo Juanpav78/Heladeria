@@ -1,12 +1,7 @@
-.contenedor__helados{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    justify-items: center;
-    gap: 1.4rem;
 
-}
 
 .helados{
+    margin-top: -6rem;
     h2{
         font-family: $fontTitle3;
         font-size: 7.4rem;
@@ -15,6 +10,36 @@
 
         color: $brownCakeDark;
         text-shadow: -1px 3px #b2a18a;
+    }
+}
+
+.contenedor__helados{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    justify-items: center;
+    gap: 1.4rem;
+
+    .helados__carta{
+        background-color: $brownCakeDark;
+
+        .helados__carta--info{
+            max-width: 35rem;
+            padding: 2rem;
+            color: $white;
+            font-family: $fontText;
+
+            h3{
+                font-size: 2.4rem;
+            }
+
+            .precio{
+                font-weight: bold;
+                font-size: 3rem;
+                color: $greenCake;
+                text-align: end;
+            }
+        }
     }
 }
 

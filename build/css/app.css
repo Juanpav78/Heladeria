@@ -310,6 +310,7 @@ template {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -319,6 +320,8 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.8;
+  background-color: rgb(248, 248, 248);
+  scroll-behavior: smooth;
 }
 
 .contenedor {
@@ -331,11 +334,11 @@ body {
 img {
   min-width: 28rem;
   width: 100%;
-  min-height: 19rem;
+  min-height: 24rem;
   max-width: 35rem;
 }
 
-a, p, h1, h2 {
+a, p, h1, h2, h3 {
   font-family: "Baloo Tamma 2", cursive;
   text-decoration: none;
   margin: 0;
@@ -366,7 +369,27 @@ a, p, h1, h2 {
     margin-left: 0;
   }
   100% {
-    margin-left: -120rem;
+    margin-left: -160rem;
+  }
+}
+@media (max-width: 1000px) {
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -80rem;
+    }
+  }
+}
+@media (max-width: 512px) {
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -40rem;
+    }
   }
 }
 .boton_circular {
@@ -541,12 +564,25 @@ a, p, h1, h2 {
     display: flex;
   }
   .navbar {
-    visibility: hidden;
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    z-index: -2;
+    transition: all 0.5s ease;
+    background-color: #5c4141;
+    top: 32rem;
+    left: 0;
+    width: 100%;
+  }
+  .navbar .nav__texto {
+    color: rgb(248, 248, 248);
   }
   .navbar.active {
-    visibility: visible;
-    display: block;
+    z-index: 1;
+    opacity: 1;
+    transition: all 0.5s ease;
   }
 }
 .main {
@@ -674,13 +710,9 @@ a, p, h1, h2 {
     animation: boton__circulo2 0.8s both;
   }
 }
-.contenedor__helados {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  gap: 1.4rem;
+.helados {
+  margin-top: -6rem;
 }
-
 .helados h2 {
   font-family: "Lobster", cursive;
   font-size: 7.4rem;
@@ -688,6 +720,32 @@ a, p, h1, h2 {
   text-align: center;
   color: #5c4141;
   text-shadow: -1px 3px #b2a18a;
+}
+
+.contenedor__helados {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  gap: 1.4rem;
+}
+.contenedor__helados .helados__carta {
+  background-color: #5c4141;
+}
+.contenedor__helados .helados__carta .helados__carta--info {
+  max-width: 35rem;
+  padding: 2rem;
+  color: rgb(248, 248, 248);
+  font-family: "Baloo Tamma 2", cursive;
+}
+.contenedor__helados .helados__carta .helados__carta--info h3 {
+  font-size: 2.4rem;
+}
+.contenedor__helados .helados__carta .helados__carta--info .precio {
+  font-weight: bold;
+  font-size: 3rem;
+  color: #65ac9c;
+  text-align: end;
 }
 
 @media (max-width: 1000px) {
@@ -699,4 +757,36 @@ a, p, h1, h2 {
   .contenedor__helados {
     grid-template-columns: 1fr;
   }
+}
+.footer {
+  background-color: #5c4141;
+  border-top: #b2a18a 1.4rem solid;
+  height: 20rem;
+}
+.footer .footer__copy {
+  margin-top: 4rem;
+}
+.footer .footer__copy p {
+  color: rgb(248, 248, 248);
+  font-family: "Exo 2", sans-serif;
+  font-size: 2.4rem;
+  text-align: center;
+}
+.footer .footer__social {
+  margin-top: 2rem;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+.footer .footer__social a i {
+  display: flex;
+  font-size: 3.4rem;
+  color: azure;
+  visibility: visible;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }

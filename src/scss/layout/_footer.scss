@@ -1,0 +1,41 @@
+.footer{
+    background-color: $brownCakeDark;
+    border-top: $brownCake 1.4rem solid;
+    height: 20rem;
+
+    .footer__copy{
+        margin-top: 4rem;
+        p{
+            color: $white;
+            font-family: $fontTitle1;
+            font-size: 2.4rem;
+            text-align: center;
+        }
+    }
+
+    .footer__social{
+        margin-top: 2rem;
+        font-size: 4rem;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+    
+        a{
+            i{
+                display: flex;
+                font-size: 3.4rem;
+                color: azure;
+                visibility: visible;
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+              }
+        }
+
+    }
+}
+
+
+

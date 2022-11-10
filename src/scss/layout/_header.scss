@@ -64,13 +64,30 @@
         }
 
         .navbar{
-            visibility: hidden;
-            display: none;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            transition: opacity .5s ease;
+            opacity: 0;
+            z-index: -2;
+            transition: all .5s ease;
+            background-color: $brownCakeDark;
+            top: 32rem;
+            left: 0;
+            width: 100%;
 
+            .nav__texto{
+                color: $white;
+            }
 
             &.active{
-                visibility: visible;
-                display: block;
+                
+                z-index: 1;
+                opacity: 1;
+                transition: all .5s ease;
+                
+                
+                
             }
         }
     }

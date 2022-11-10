@@ -1,6 +1,7 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     
 }
 *, *:before, *:after {
@@ -9,6 +10,8 @@ html {
 body {
     font-size: 1.6rem;
     line-height: 1.8;
+    background-color: $white;
+    scroll-behavior: smooth;
 }
 
 .contenedor{
@@ -21,11 +24,11 @@ body {
 img{
     min-width: 28rem;
     width: 100%;
-    min-height: 19rem;
+    min-height: 24rem;
     max-width: 35rem;
 }
 
-a, p, h1, h2{
+a, p, h1, h2, h3{
     font-family: $fontText;
     text-decoration: none;
     margin: 0;
@@ -57,7 +60,28 @@ a, p, h1, h2{
        margin-left:0 ;
       }
       100% {
-       margin-left:-120rem ;
+       margin-left:-160rem ;
       }
 }
 
+@include tablet{
+    @keyframes wave {
+        0% {
+           margin-left:0 ;
+          }
+          100% {
+           margin-left:-80rem ;
+          }
+    }
+}
+
+@include telefono{
+    @keyframes wave {
+        0% {
+           margin-left:0 ;
+          }
+          100% {
+           margin-left:-40rem ;
+          }
+    }
+}
